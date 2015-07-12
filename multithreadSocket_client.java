@@ -21,7 +21,7 @@ class multithreadSocket_client
 					break;
 				}
 			}
-			in.close();
+			//in.close();
 			out.close();
 			cs.close();
 		}
