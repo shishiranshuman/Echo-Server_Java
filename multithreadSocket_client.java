@@ -1,5 +1,7 @@
-import java.io.*;
-import java.net.*;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.PrintStream;
+import java.net.Socket;
 
 class multithreadSocket_client
 {
@@ -9,7 +11,6 @@ class multithreadSocket_client
 			Socket cs=new Socket("localhost",7878);
 			BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
 			PrintStream out=new PrintStream(cs.getOutputStream());
-			//BufferedReader in=new BufferedReader(new InputStreamReader(cs.getInputStream()));
 			String msg;
 			while(true)
 			{
@@ -21,7 +22,6 @@ class multithreadSocket_client
 					break;
 				}
 			}
-			//in.close();
 			out.close();
 			cs.close();
 		}
